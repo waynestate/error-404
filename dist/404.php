@@ -4,7 +4,7 @@
 
     // If we aren't locally
     $path_images = ($local == true) ? '' : '/_resources/images/';
-    $path_css = ($local == true) ? '' : '/_resources/css/errors/404/';
+    $path_css = ($local == true) ? '' : '/_resources/css/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="xlarge-6 large-6 medium-12 small-12 columns">
-                    <img src="<?php echo $path_images; ?>yeti.png" title="Yeti in the woods" />
+                    <img src="<?php echo $path_images; ?>404.png" title="Yeti in the woods" />
                 </div>
             </div>
         </div>
