@@ -4,7 +4,7 @@
 
     // Set the full path for the includes, if we are not on local. This way the virtual host your on can include the assests properly.
     $path_images = ($local == true) ? '' : '/_resources/images/';
-    $path_css = ($local == true) ? '' : '/_resources/css/';
+    $path_css = ($local == true) ? '' : '/_resources/css/errors/404/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@
                     <h2>Oops! Looks like<br /> this page can't be found!</h2>
                     <p>If you’re still unable to locate the page you are<br /> looking for and need additional help, please email us<br /> at <a href="mailto:web@wayne.edu">web@wayne.edu</a> and we will try to assist you.</p>
 
-                    <form action="http://wayne.edu/search" method="get">
+                    <form action="https://wayne.edu/search" method="get">
                         <div class="row">
                             <div class="xlarge-12 columns">
                                 <div class="row collapse">
