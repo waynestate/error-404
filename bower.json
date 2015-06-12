@@ -16,6 +16,7 @@
         "tests"
     ],
     "devDependencies": {
-        "foundation": "5.4.*"
+        "foundation": "~5.5",
+        "styleguide": "http://github.com/waynestate/styleguide.git#~0.2"
     }
 }
