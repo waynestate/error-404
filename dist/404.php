@@ -1,8 +1,8 @@
 <?php
-    // Local flag
-    $local = (strpos($_SERVER['HTTP_HOST'], '.dev') !== false) ? true : false;
+    // Change this to develop locally
+    $local = ($_SERVER['HTTP_HOST'] == 'error-404.wayne.dev') ? true : false;
 
-    // Set the full path for the includes, if we are not on local. This way the virtual host your on can include the assests properly.
+    // If we aren't locally
     $path_images = ($local == true) ? '' : '/_resources/images/';
     $path_css = ($local == true) ? '' : '/_resources/css/errors/404/';
 ?>
