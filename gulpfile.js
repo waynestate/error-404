@@ -23,7 +23,7 @@ var bowerDir = 'bower_components';
 var foundationJsDir = bowerDir + '/foundation/js/foundation';
 
 gulp.task('styles', function () {
-    return gulp.src(sassDir + '/main.scss')
+    return gulp.src(sassDir + '/404.scss')
         .pipe($.plumber())
         .pipe($.rubySass({
             style: 'expanded',
