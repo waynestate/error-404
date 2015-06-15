@@ -46,7 +46,7 @@ gulp.task('watch', ['styles'], function () {
     // Initialize livereload
     $.livereload = $.livereload();
 
-    gulp.watch('main.css', function (file) {
+    gulp.watch(targetAppDir + '404.css', function (file) {
         $.livereload.changed(file.path);
     });
 
