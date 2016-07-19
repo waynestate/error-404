@@ -16,9 +16,6 @@ var sassDir = appDir + 'scss';
 var targetAppDir = 'dist/';
 var targetResourcesDir = targetAppDir;
 
-// Which directory should Sass compile to?
-var targetCSSDir = targetResourcesDir + '';
-
 gulp.task('styles', function () {
     gulp.src(sassDir + "/**/*.scss")
     // Capture all errors
@@ -27,11 +24,11 @@ gulp.task('styles', function () {
         // Lint the scss
         .pipe($.postcss([
             stylelint(),
-            reporter({ clearMessages: true, throwError: true }),
-        ],{ syntax: scss }))
+            reporter({clearMessages: true, throwError: true}),
+        ], {syntax: scss}))
 
         // Compile the scss
-        .pipe($.sourcemaps.init({ loadMaps: true }))
+        .pipe($.sourcemaps.init({loadMaps: true}))
         .pipe($.sass({
             includePaths: ['node_modules'],
         }).on('error', $.sass.logError))
@@ -47,7 +44,7 @@ gulp.task('styles', function () {
 
         // Write the files to the public directory
         .pipe($.sourcemaps.write('./'))
-        .pipe(gulp.dest(targetCSSDir))
+        .pipe(gulp.dest(targetResourcesDir))
         .pipe($.size())
 });
 
