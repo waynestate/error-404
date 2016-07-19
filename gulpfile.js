@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 
 // Load plugins
-// Load plugins
 var $ = require('gulp-load-plugins')();
 var stylelint = require('stylelint');
 var reporter = require('postcss-reporter');
@@ -57,13 +56,5 @@ gulp.task('default', ['styles']);
 
 // Keep an eye on Sass, JS, for changes...
 gulp.task('watch', ['styles'], function () {
-
-    // Initialize livereload
-    $.livereload = $.livereload();
-
-    gulp.watch(targetAppDir + '404.css', function (file) {
-        $.livereload.changed(file.path);
-    });
-
     gulp.watch(sassDir + '/**/*.scss', ['styles']);
 });
