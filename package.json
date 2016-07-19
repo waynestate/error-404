@@ -1,7 +1,6 @@
 {
     "name": "@waynestate/error-404",
-    "private": false,
-    "version": "0.1.7",
+    "private": true,
     "description": "",
     "main": "www.80/index.php",
     "scripts": {
