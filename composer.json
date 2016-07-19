@@ -4,7 +4,7 @@
     "type": "library",
     "description": "Wayne State University Error 404 HTTP Status",
     "keywords": ["status","http","error","404"],
-    "homepage": "https://github.com/waynestate/error-500",
+    "homepage": "https://github.com/waynestate/error-404",
     "license": "MIT",
     "authors": [
         {
