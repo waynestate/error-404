@@ -20,7 +20,7 @@ body {
 
 .center-site {
     // Medium and up
-    @media screen and #{breakpoint(medium)} {
+    @media screen and #{breakpoint(large)} {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -34,6 +34,7 @@ body {
 
     &, h1, h2, h3, h4, h5, h6 {
         font-family: 'Noto Sans';
+        font-weight: 400;
     }
 
     a {
@@ -47,9 +48,5 @@ body {
 
     h2 {
         font-size: 2em;
-    }
-
-    .button {
-        padding: 0;
     }
 }
