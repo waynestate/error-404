@@ -60,7 +60,7 @@
 
             ga('create', 'UA-35684592-1', 'wayne.edu', {'name': 'allWayneState'});
             ga('allWayneState.send', 'pageview');
-            ga('allWayneState.send', 'event', 'Error', '404', 'page: //<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?> ref: <?php echo $_SERVER['HTTP_REFERER']; ?>');
+            ga('allWayneState.send', 'event', 'Error', '404', 'page: //{{ $request->server("HTTP_HOST") }}{{ $request->server("REQUEST_URI") }} ref: {{ $request->server("HTTP_REFERER") }}');
         </script>
     </body>
 </html>
