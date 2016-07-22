@@ -1,0 +1,22 @@
+{
+    "name": "waynestate/error-404",
+    "version": "1.0.0",
+    "type": "library",
+    "description": "Wayne State University Error 404 HTTP Status",
+    "keywords": ["status","http","error","404"],
+    "homepage": "https://github.com/waynestate/error-404",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Web Communications",
+            "email": "web@wayne.edu"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/waynestate/error-404/issues",
+        "source": "https://github.com/waynestate/error-404"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
