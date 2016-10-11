@@ -5,6 +5,7 @@ var $ = require('gulp-load-plugins')();
 var stylelint = require('stylelint');
 var reporter = require('postcss-reporter');
 var scss = require('postcss-scss')
+var sym = require('gulp-sym');
 
 // Where is the app?
 var appDir = 'src/';
@@ -48,8 +49,19 @@ gulp.task('styles', function () {
         .pipe($.size())
 });
 
+gulp.task('symlink', function(){
+    gulp.src(targetAppDir)
+        .pipe(sym('www.80', { force: true}));
+    gulp.src(targetAppDir + '/404.css')
+        .pipe(sym(targetAppDir + '/_resources/css/404.css', { force: true}));
+    gulp.src(targetAppDir + '/404.css.map')
+        .pipe(sym(targetAppDir + '/_resources/css/404.css.map', { force: true}));
+    gulp.src(targetAppDir + '/404.png')
+        .pipe(sym(targetAppDir + '/_resources/images/404.png', { force: true}));
+});
+
 // Default task
-gulp.task('default', ['styles']);
+gulp.task('default', ['styles','symlink']);
 
 // Keep an eye on Sass, JS, for changes...
 gulp.task('watch', ['styles'], function () {
